@@ -1,4 +1,4 @@
-<h1>Entity Relationhip Diagram<h1>
+<h1>Entity Relationship Diagram<h1>
 
 ![erd](https://user-images.githubusercontent.com/82430279/194702439-e4e7ba34-6d09-4015-84de-99a07311cf31.png)
 
@@ -8,7 +8,7 @@ Link to Frontend = http://localhost:3000/<br>
 
 <h1>Endpoint For FrontEnd</h1>
 <li> Get all cars : /</li>
-<li> Create cars : /add-cars/:id </li>
+<li> Create cars : /add-cars</li>
 <li> Update cars : /update-cars/:id</li>
 <li> Delete  cars : /delete-cars/:id</li>
 
