@@ -1,0 +1,78 @@
+<%- include("layouts/main") -%>
+   <section>
+      <div class="container col-md-6 " style="margin-left: 19rem;"">
+          <div class="row">
+              <div>
+                  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                      <ol class="breadcrumb mt-md-5 my-md-4" id="tap" >
+                        <li class="breadcrumb-item"><b> Cars</b></a></li>
+                        <a href="/" style="text-decoration: none;" class="breadcrumb-item active"><b>List Car</b></a>
+                        <li class="breadcrumb-item active" aria-current="page">Update Car Information</li>
+                      </ol>
+                    </nav>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container col-md-6" style="margin-left: 19rem;">
+        <b><h5 class="listCars">Update Car Information</h5></b>
+      </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="card" id="card-mobil" style="width:60rem;">
+                        <div class="card-body" >
+                          <center><h5 class="card-title">Form Update Car Information</h5></center>
+                          <form action="/update-cars/<%= data.id %>" style="width: 100%;"  method="post" enctype="multipart/form-data">
+                            <div class="mb-3 row">
+                              <label for="name" class="col-sm-2 col-form-label">Nama<span style="color: red;">*</span></label>
+                              <div class="col-sm-10">
+                                <input type="text"  class="form-control" name="name" id="name"  value="<%= data.name %>">
+                              </div>
+                            </div>
+                            <div class="mb-3 row">
+                              <label for="price" class="col-sm-2 col-form-label">Sewa Per hari<span style="color: red;">*</span></label>
+                              <div class="col-sm-10">
+                                <input type="text" class="form-control" id="proce" name="price"  value="<%= data.price %>">
+                                
+                              </div>
+                            </div>
+                            <div class="mb-3 row">
+                              <label for="type" class="col-sm-2 col-form-label">Ukuran<span style="color: black;">*</span></label>
+                              <div class="col-sm-10">
+                                <select class="form-select" aria-label="Default select example"  name ="type" value="<%= data.type %>">
+                                  <option value="Small" selected>Small</option>
+                                  <option value="Medium">Medium</option>
+                                  <option value="Large">Large</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="mb-3 row">
+                              <label for="image" class="col-sm-2 col-form-label">Foto<span style="color: red;">*</span></label>
+                              <div class="col-sm-10">
+                                <input type="file" readonly class="form-control" id="picture" name="picture"  value="<%= data.image%>"  >
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              
+                                  <a href="/" class="btn btn-light" id="cancel" style="border-color: #0d28a6;">Cancel</a>
+                                  <button type="submit" class="btn btn-primary text-light">Update</button>
+                             
+                          </div>
+                      </form>
+                    </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   

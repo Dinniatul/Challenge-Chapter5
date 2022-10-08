@@ -1,0 +1,74 @@
+
+    <%- include("layouts/main") -%>
+      <section>
+        <div  style="margin-left: 19.3rem; top: 100px;">
+          <div class="row">
+                  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                      <ol class="breadcrumb mt-md-5 my-md-4" id="tap" >
+                        <li class="breadcrumb-item"><b> Cars</b></a></li>
+                        <a class="breadcrumb-item active" aria-current="page" href="/" style="text-decoration: none;">List Car</a>
+                        <li class="breadcrumb-item active" aria-current="page">Add New Car</li>
+                      </ol>
+                    </nav>
+          </div>
+      </div>
+      </section>
+  
+  
+      <section>
+        <div class="container col-md-6" style="margin-left: 18.5rem;">
+          <b><h5 class="listCars">Add New car</h5></b>
+        </div>
+      </section>
+  
+      <section>
+          <div class="container">
+              <div class="row">
+                  <div class="col-6">
+                      <div class="card" id="card-mobil" style="width:60rem;">
+                          <div class="card-body" >
+                            <center><h5 class="card-title">Form Add New Car</h5></center>
+                            <form action="/add-cars" style="width: 100%;" enctype="multipart/form-data" method="post">
+                              <div class="mb-3 row">
+                                <label for="name" class="col-sm-2 col-form-label">Nama<span style="color: red;">*</span></label>
+                                <div class="col-sm-10">
+                                  <input type="text"  class="form-control" name="name" id="name" placeholder="avanza">
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label for="price" class="col-sm-2 col-form-label">Sewa Per hari<span style="color: red;">*</span></label>
+                                <div class="col-sm-10">
+                                  <input type="text" class="form-control" id="price" name="price" placeholder="Rp 0.-">
+                                  
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label for="type" class="col-sm-2 col-form-label">Ukuran<span style="color: black;">*</span></label>
+                                <div class="col-sm-10">
+                                  <select class="form-select" aria-label="Default select example" name="type" id="type">
+                                    <option value="Small">Small</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="Large">Large</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <div class="mb-3 row">
+                                <label for="image" class="col-sm-2 col-form-label">Foto<span style="color: red;">*</span></label>
+                                <div class="col-sm-10">
+                                  <input type="file" class="form-control" id="picture" name="picture" >
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <a  href="/" class="btn btn-light" id="cancel" style="border-color: #0d28a6;">Cancel</a>
+                                <button  type = "submit" class="btn btn-light text-light" id="save">Save</button>
+                              </div>
+                              
+                        </form>
+                      </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+      </section>
+
+
