@@ -56,6 +56,18 @@ app.put("/cars/:id", (req, res) => {
     });
 });
 
+app.delete("/cars/:id", (req, res) => {
+  const id = req.params.id;
+
+  Mobil.destroy({ where: { id: id } })
+    .then((cars) => {
+      res.status(200).json({ data: cars });
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
 app.listen(port, () => {
   console.log("running in port", port);
 });
